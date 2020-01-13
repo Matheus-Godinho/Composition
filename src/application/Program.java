@@ -23,7 +23,7 @@ public class Program {
 		Date birthDate;
 		Client client;
 		
-		sdf = new SimpleDateFormat();		
+		sdf = new SimpleDateFormat("dd/MM/yyyy");		
 		System.out.printf("Enter client data:%n");
 		System.out.printf("Name: ");
 		name = sc.nextLine();
@@ -50,6 +50,7 @@ public class Program {
 		for (int i = 1; i <= n; i++) {
 			System.out.printf("Enter #%d item data:%n", i);
 			System.out.printf("Product name: ");
+			sc.nextLine();
 			name = sc.nextLine();
 			System.out.printf("Product price: ");
 			price = sc.nextDouble();
@@ -59,6 +60,9 @@ public class Program {
 			item = new OrderItem(quantity, price, product);
 			order.addItem(item);
 		}
+		
+		System.out.printf("%nORDER SUMMARY:%n");
+		System.out.printf("%s%n", order.toString());
 		
 		sc.close();
 

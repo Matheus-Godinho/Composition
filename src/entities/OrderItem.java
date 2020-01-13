@@ -38,4 +38,13 @@ public class OrderItem {
 		return getQuantity() * getPrice();
 	}
 
+	@Override
+	public String toString() {
+		return getProduct().toString()
+				+ ", Quantity: "
+				+ getQuantity() 
+				+ ", Subtotal: $"
+				+ String.format("%.2f", subTotal());
+	}
+
 }

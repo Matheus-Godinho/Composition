@@ -1,6 +1,7 @@
 package entities;
 
 public class Product {
+	
 	private String name;
 	private Double price;
 	
@@ -21,6 +22,13 @@ public class Product {
 	}
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return getName() 
+				+ ", $"
+				+ String.format("%.2f", getPrice());
 	}
 	
 }
